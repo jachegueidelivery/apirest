@@ -2,12 +2,12 @@
 
 A aplicação REST de todo o sistema.
 
-1. Npm install
+1. NPM install
 2. Run application
 3. Run
 4. Access
 
-## Setup
+## Installation
 
 Use the npm command to install the packges node
 
