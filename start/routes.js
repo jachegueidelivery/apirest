@@ -1,4 +1,4 @@
-'use strict'
+﻿'use strict'
 
 const Route = use('Route')
 
@@ -16,3 +16,5 @@ Route.get('companies', 'CompanyController.index')// Busca as empresas por like: 
 Route.get('companies/:id', 'CompanyController.show')// Busca uma empresa por id
 
 Route.post('products', 'ProductController.store')// Cria um novo produto
+
+//Teste 121312
