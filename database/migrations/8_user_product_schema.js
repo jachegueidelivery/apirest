@@ -27,6 +27,15 @@ class UserProductSchema extends Schema {
         .foreign("product_id")
         .references("products.id")
         .onDelete("cascade");
+      table
+        .integer("company_id")
+        .notNullable()
+        .unsigned()
+        .index("company_id");
+      table
+        .foreign("company_id")
+        .references("companies.id")
+        .onDelete("cascade");
       table.timestamps();
     });
   }

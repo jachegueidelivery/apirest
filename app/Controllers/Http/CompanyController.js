@@ -17,10 +17,7 @@ class CompanyController {
    * Show a list of all companies.
    * GET companies
    *
-   * @param {object} ctx
    * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
    */
   async index ({ request }) {
     const query = request.get()
@@ -61,10 +58,8 @@ class CompanyController {
    * Display a single company.
    * GET companies/:id
    *
-   * @param {object} ctx
    * @param {Request} ctx.request
    * @param {Response} ctx.response
-   * @param {View} ctx.view
    */
   async show ({ params, response }) {
     // const company = await Company.query()
@@ -119,11 +114,26 @@ class CompanyController {
       // .where('products.company_id', params.id)
       .fetch()
 
-    return {
+    return {  
       products
       // category
     }
   }
+
+  /**
+   * Retorna os pedidos feitos
+   * @param {*} param0 
+   */
+ async getRequests ({ params, response }) {
+  const company = await Company
+  .query()
+  .with('userProducts')
+  // .withCount('products as total_products')
+  .where('companies.company_id', params.company_id)
+  .fetch()
+  return company;
+ }
+
 
   /**
    * Render a form to update an existing company.
