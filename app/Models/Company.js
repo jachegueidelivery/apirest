@@ -19,6 +19,11 @@ class Company extends Model {
   category () {
     return this.manyThrough('App/Models/Product', 'prod')
   }
+
+  userProducts () {
+    return this.hasMany('App/Models/UserRequest')
+  }
+  
 }
 
 module.exports = Company
