@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
 |--------------------------------------------------------------------------
 | Factory
@@ -11,38 +11,37 @@
 */
 /** @type {import('@adonisjs/framework/src/Hash')} */
 
-const Hash = use("Hash");
 /** @type {import('@adonisjs/lucid/src/Factory')} */
-const Factory = use("Factory");
+const Factory = use('Factory')
 
 /**
  * USUÁRIOS
  */
-Factory.blueprint("App/Models/User", async faker => {
+Factory.blueprint('App/Models/User', async faker => {
   return {
-    user_name: faker.username().toUpperCase(),
-    user_email: faker.email().toUpperCase(),
+    user_name: faker.name({ nationality: 'it' }),
+    user_email: faker.email().toLowerCase(),
     user_password: '123',
     user_street: '1',
     user_district: '1',
     city_id: 1
-  };
-});
+  }
+})
 
 /**
  * PEDIDOS
  */
 
-Factory.blueprint("App/Models/UserProducts", async faker => {
+Factory.blueprint('App/Models/UserProduct', async faker => {
   return {
-    user_name: faker.username().toUpperCase(),
-    user_email: faker.email().toUpperCase(),
-    user_password: '123',
-    user_street: '1',
-    user_district: '1',
-    city_id: 1
-  };
-});
+    user_prod_total_amount: 1,
+    user_prod_total_value: 1,
+    user_id: '1',
+    user_prod_status: '3',
+    product_id: '1',
+    company_id: '1'
+  }
+})
 
 /*
 Factory.blueprint("App/Models/Uf", async faker => {
@@ -52,7 +51,6 @@ Factory.blueprint("App/Models/Uf", async faker => {
 });
 */
 /*
-
 
 Factory.blueprint("App/Models/City", async faker => {
   return {
