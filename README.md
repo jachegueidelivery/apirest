@@ -64,7 +64,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 # :pushpin: Address 
 
 ## Description
-> `` This table is accountable for register address of the system users.``
+>``This table is accountable for register address of the system users.``
 
 ## Attributes
   - __address_id__ ![](resources/pk.png)
@@ -81,8 +81,6 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 ## Attributes
   - __category_id__ ![](resources/pk.png)
   - category_name
-
-
 
 ----
 
