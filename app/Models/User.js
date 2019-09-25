@@ -24,6 +24,10 @@ class User extends Model {
   company () {
     return this.belongsToMany('App/Models/Company')
   }
+
+  pedidos () {
+    return this.hasMany('App/Models/UserProduct')
+  }
 }
 
 module.exports = User
