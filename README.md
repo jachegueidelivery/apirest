@@ -2,20 +2,26 @@
 
 A aplicação REST de todo o sistema.
 
-1. NPM install
-2. Run application
-3. Run
-4. Access
+1. [NPM install](#installation)
+2. [Run application](#pushpin-run-app)
+3. [Access](#pushpin-access)
+4. [Database Documentaion](#database-documentation)
 
-## Installation
+## __Installation__
 
+## :pushpin: Clone the reposity
+
+```git
+git clone https://github.com/[YOUT_USER_NAME]/apirest
+```
+## :pushpin: Install with npm
 Use the npm command to install the packges node
 
 ```bash
 npm install
 ```
 
-## Run
+## :pushpin: Run App
 
 Use the adonis command run and start the application
 
@@ -23,33 +29,42 @@ Use the adonis command run and start the application
 adonis serve --dev
 ```
 
-### Access
+### :pushpin: Access
 
 Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
+---
+
 # Database Documentation
 
+# __Logic Model:__
+![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
+
+# __Conceitual Model:__
+![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/delivery_model_conceitual.jpg)
+
+---
 > ## Entities:
 
-- [Address](#)
-- [Categories]()
-- [Cities]()
-- [Companies]()
-- [Files]()
-- [Contacts]()
-- [Itens_Request]()
-- [Products]()
-- [Requests]()
-- [Stocks]()
-- [Users](#)
-- [Ufs](#)
+- [Address](#pushpin-address)
+- [Categories](#pushpin-categories)
+- [Cities](#pushpin-cities)
+- [Companies](#pushpin-companies)
+- [Files](#pushpin-files)
+- [Contacts](#pushpin-contacts)
+- [Itens_Request](#pushpin-itens_request)
+- [Products](#pushpin-products)
+- [User_Requests](#pushpin-user_requests)
+- [Stocks](#pushpin-stocks)
+- [Users](#pushpin-users)
+- [Ufs](#pushpin-ufs)
 
 ## Below, is __description__ from entities databases in System.
 
-:pushpin: # __[Address](#s)__
+# :pushpin: Address 
 
 ## Description
-> `` This table is accountable for register address of the system users.``
+>``This table is accountable for register address of the system users.``
 
 ## Attributes
   - __address_id__ ![](resources/pk.png)
@@ -58,7 +73,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - number
 ---
 
-# \> __[Categories](#s)__
+# :pushpin: Categories
 
 ## Description
 > `` Esta tabela é responsável por cadastrar as categorias dos produtos.``
@@ -67,11 +82,9 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __category_id__ ![](resources/pk.png)
   - category_name
 
-
-
 ----
 
-# \> __[Cities](#s)__
+# :pushpin: Cities
 
 ## Description
 > `` Esta __tabela__ terá as cidades já pré-cadastradas, no sistema. Por meio dessa tabela...``
@@ -81,7 +94,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - city_name
 ---
 
-# \> __[Companies](#s)__
+# :pushpin: Companies
 
 ## Description
 > `` Esta tabela é responsável por cadastrar as empresas.``
@@ -95,7 +108,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __address_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Files](#s)__
+# :pushpin: Files
 
 ## Description
 > `` Esta tabela é responsável por incluir os arquivos.``
@@ -104,7 +117,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __file_id__ ![](resources/pk.png)
 
 ---
-# \> __[Contacts](#s)__
+# :pushpin: Contacts
 
 ## Description
 > `` Esta tabela é responsável por cadastrar os contatos.``
@@ -116,7 +129,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __user_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Itens_Request](#s)__
+# :pushpin: Itens_Request
 
 ## Description
 > `` Esta tabela conterá os itens do pedido do cliente.``
@@ -130,7 +143,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __product_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Products](#s)__
+# :pushpin: Products
 
 ## Description
 > `` Esta tabela é responsável por cadastrar os produtos.``
@@ -144,7 +157,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __category_id__ ![](resources/b_key.png)
 ---
 
-# \> __[User_Requests](#s)__
+# :pushpin: User_Requests
 
 ## Description
 > `` Esta tabela é responsável por cadastrar o pedido do cliente.``
@@ -156,7 +169,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __compay_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Itens_Request](#s)__
+# :pushpin: Itens_Request
 
 ## Description
 > `` Esta tabela é responsável por cadastrar as categorias das empresas.``
@@ -170,7 +183,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 - __item_product_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Stocks](#s)__
+# :pushpin: Stocks
 
 ## Description
 > `` Esta tabela é responsável por cadastrar a estoque dos produtos.``
@@ -183,7 +196,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __stock_product_id__ ![](resources/b_key.png)
 ---
 
-# \> __[Users](#s)__
+# :pushpin: Users
 
 ## Description
 > `` Esta tabela é responsável por cadastrar os usuários.``
@@ -197,7 +210,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - __user_city_id__ - ![](resources/b_key.png)
 ---
 
-# \> __[UFs](#s)__
+# :pushpin: UFs
 
 ## Description
 > `` Esta tabela é responsável por conter as Unidades Federativas.``
