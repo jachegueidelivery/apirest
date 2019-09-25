@@ -2,10 +2,10 @@
 
 A aplicação REST de todo o sistema.
 
-1. NPM install
-2. Run application
-3. Run
-4. Access
+1. [NPM install]()
+2. [Run application](#run-app)
+3. [Run]()
+4. [Access]()
 
 ## __Installation__
 
@@ -21,7 +21,7 @@ Use the npm command to install the packges node
 npm install
 ```
 
-## :pushpin: Run
+## Run App
 
 Use the adonis command run and start the application
 
@@ -32,6 +32,8 @@ adonis serve --dev
 ### :pushpin: Access
 
 Access, in browser, the address http://127.0.0.1:[PORT_NAME]
+
+---
 
 # Database Documentation
 
