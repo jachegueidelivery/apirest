@@ -3,6 +3,7 @@
 const User = use('App/Models/User')
 
 class UserController {
+
   async index ({ request, response, view }) { }
 
   async store ({ request, response }) {
@@ -24,15 +25,15 @@ class UserController {
   }
 
   async show ({ params, request, response, view }) {
-    // const data = request.only([
-    //   'user_email',
-    //   'user_password'
-    // ])
-    // const user = await User.query()
-    //   .with('company')
-    //   .where('user.user_token')
+    const data = request.only([
+      'user_email',
+      'user_password'
+    ])
 
-    // return user
+    const user = await User.query()
+      .with('pedidos').fetch();
+
+    return user
   }
 
   async edit ({ params, request, response, view }) { }

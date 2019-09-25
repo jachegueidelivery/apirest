@@ -18,7 +18,8 @@ class UserProductSchema extends Schema {
         .foreign('user_id')
         .references('users.id')
         .onDelete('cascade')
-      table.enu('user_prod_status', ['1', '2', '3', '4'])
+      table.enu('user_prod_status', ['1', '2', '3', '4']).
+      defaultTo('1')
       table
         .integer('product_id')
         .notNullable()
