@@ -35,6 +35,13 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 # Database Documentation
 
+# __Logic Model:__
+![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
+
+# __Conceitual Model:__
+![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/delivery_model_conceitual.jpg)
+
+---
 > ## Entities:
 
 - [Address](#Address)
@@ -49,12 +56,6 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 - [Stocks]("#")
 - [Users](#)
 - [Ufs](#)
-
-# __Logic Model:__
-![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
-
-# __Conceitual Model:__
-![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/delivery_model_conceitual.jpg)
 
 ## Below, is __description__ from entities databases in System.
 
