@@ -21,7 +21,7 @@ Use the npm command to install the packges node
 npm install
 ```
 
-## Run App
+## :pushpin: Run App
 
 Use the adonis command run and start the application
 
