@@ -87,7 +87,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 # :pushpin: Cities
 
 ## Description
-> `` Esta __tabela__ terá as cidades já pré-cadastradas, no sistema. Por meio dessa tabela...``
+> `` Esta tabela terá as cidades já pré-cadastradas, no sistema. Por meio dessa tabela...``
 
 ## Attributes
   - __city_id__ ![](resources/pk.png)
