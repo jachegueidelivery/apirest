@@ -37,12 +37,6 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 # Database Documentation
 
-<<<<<<< HEAD
-# __Logical Model:__
-![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
-
-=======
->>>>>>> 1e1eadd5987cee39cc01839a0e798d942e541a2a
 # __Conceitual Model:__
 ![](resources/conceitual_model.jpg)
 
