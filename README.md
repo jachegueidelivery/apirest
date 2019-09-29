@@ -12,7 +12,7 @@ A aplicação REST de todo o sistema.
 ## :pushpin: Clone the reposity
 
 ```git
-git clone https://github.com/[YOUT_USER_NAME]/apirest
+git clone https://github.com/[YOUR_USER_NAME]/apirest
 ```
 ## :pushpin: Install with npm
 Use the npm command to install the packges node
@@ -37,7 +37,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 # Database Documentation
 
-# __Logic Model:__
+# __Logical Model:__
 ![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
 
 # __Conceitual Model:__

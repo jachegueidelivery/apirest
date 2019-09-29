@@ -20,11 +20,9 @@ Route.get("requests/company/:company_id", "CompanyController.getRequests"); //Bu
 
 Route.post("products", "ProductController.store"); // Cria um novo produto
 
-
-
-
 //Adicionados
 Route.get("products/company/:id", "ProductController.getProductsByCompanyId"); //
+
 Route.get(
   "categories/company/:id",
   "CategoryController.getCategoriesByCompanyId"
