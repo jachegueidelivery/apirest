@@ -12,7 +12,7 @@ A aplicação REST de todo o sistema.
 ## :pushpin: Clone the reposity
 
 ```git
-git clone https://github.com/[YOUT_USER_NAME]/apirest
+git clone https://github.com/[YOUR_USER_NAME]/apirest
 ```
 ## :pushpin: Install with npm
 Use the npm command to install the packges node
