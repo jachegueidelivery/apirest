@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "git-push",
             "type": "shell",
             "command": "git add . && git commit -m \"Alterações\" && git push origin master",
             "group": {

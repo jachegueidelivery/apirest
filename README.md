@@ -37,11 +37,17 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 # Database Documentation
 
+<<<<<<< HEAD
 # __Logical Model:__
 ![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/MODELO_LOGICO.jpg)
 
+=======
+>>>>>>> 1e1eadd5987cee39cc01839a0e798d942e541a2a
 # __Conceitual Model:__
-![](https://raw.githubusercontent.com/TaffarelXavier/help-me/master/der/delivery_model_conceitual.jpg)
+![](resources/conceitual_model.jpg)
+
+# __Logic Model:__
+![](resources/logical_model.jpg)
 
 ---
 > ## Entities:
@@ -69,8 +75,19 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 ## Attributes
   - __address_id__ ![](resources/pk.png)
   - street
-  - type_user
-  - number
+  - district 
+  - city_id ![](resources/fk.png)
+---
+# :pushpin: Address_User_Company
+
+## Description
+>``This table is accountable for register address of the system users.``
+
+## Attributes
+  - __add_id__ ![](resources/pk.png)
+  - type_user : _ENUM(user, company)_
+  - number (O número da casa) 
+  - __user_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Categories
@@ -92,6 +109,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 ## Attributes
   - __city_id__ ![](resources/pk.png)
   - city_name
+  - __uf_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Companies
@@ -104,8 +122,19 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - fantasy_name
   - cnpj
   - logo
-  - __user_id__ ![](resources/b_key.png)
-  - __address_id__ ![](resources/b_key.png)
+  - __user_id__ ![](resources/fk.png)
+---
+
+# :pushpin: Contacts
+
+## Description
+> `` Esta tabela é responsável por cadastrar os contatos.``
+
+## Attributes
+  - __contact_id__ ![](resources/pk.png)
+  - number_phone
+  - type_user : _ENUM(user, company)_
+  - __user_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Files
@@ -115,18 +144,10 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 ## Attributes
   - __file_id__ ![](resources/pk.png)
+  - file
+  - name
+  - type
 
----
-# :pushpin: Contacts
-
-## Description
-> `` Esta tabela é responsável por cadastrar os contatos.``
-
-## Attributes
-  - __contact_id__ ![](resources/pk.png)
-  - number_phone
-  - comapany_id
-  - __user_id__ ![](resources/b_key.png)
 ---
 
 # :pushpin: Itens_Request
@@ -136,11 +157,11 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 
 ## Attributes
   - __item_request_id__ ![](resources/pk.png)
-  - amount
-  - prince
-  - subtotal
-  - __req_id__ ![](resources/b_key.png)
-  - __product_id__ ![](resources/b_key.png)
+  - item_amount
+  - item_prince
+  - item_subtotal
+  - __request_id__ ![](resources/fk.png)
+  - __product_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Products
@@ -153,8 +174,8 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - image
   - name
   - description
-  - __company_id__ ![](resources/b_key.png)
-  - __category_id__ ![](resources/b_key.png)
+  - __company_id__ ![](resources/fk.png)
+  - __category_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: User_Requests
@@ -163,10 +184,11 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 > `` Esta tabela é responsável por cadastrar o pedido do cliente.``
 
 ## Attributes
-  - __req_id__ ![](resources/pk.png)
+  - __request_id__ ![](resources/pk.png)
+  - date
   - req_status _(1, 2, 3, 4)_, default: **1**
-  - __user_id__ ![](resources/b_key.png)
-  - __compay_id__ ![](resources/b_key.png)
+  - __user_id__ ![](resources/fk.png)
+  - __compay_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Itens_Request
@@ -179,8 +201,8 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
 - item_amout
 - item_price
 - item_subtotal
-- __item_req_id__ ![](resources/b_key.png) 
-- __item_product_id__ ![](resources/b_key.png)
+- __item_req_id__ ![](resources/fk.png) 
+- __item_product_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Stocks
@@ -193,7 +215,7 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - stock_product_price
   - stock_amount
   - stock_measure_type
-  - __stock_product_id__ ![](resources/b_key.png)
+  - __stock_product_id__ ![](resources/fk.png)
 ---
 
 # :pushpin: Users
@@ -206,8 +228,8 @@ Access, in browser, the address http://127.0.0.1:[PORT_NAME]
   - user_name
   - user_password
   - user_token
-  - __user_address_id__ ![](resources/b_key.png)
-  - __user_city_id__ - ![](resources/b_key.png)
+  - __user_address_id__ ![](resources/fk.png)
+  - __user_city_id__ - ![](resources/fk.png)
 ---
 
 # :pushpin: UFs
